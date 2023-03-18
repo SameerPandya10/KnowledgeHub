@@ -1,0 +1,91 @@
+create database knowledgehub;
+use knowledgehub;
+create table user
+(khID int primary key,
+Ufname varchar(25) not null,
+Ulname varchar(25) not null,
+Uemail varchar(35) unique not null,
+UDateOfBirth date not null,
+UGender char(1) not null,
+Uusername varchar(30) unique not null,
+Upassword varchar(30) unique not null);
+create table student
+(khID int primary key,
+StudentID varchar(15) unique not null,
+Sfname varchar(25) not null,
+Slname varchar(25) not null,
+Semail varchar(35) unique not null,
+SDateOfBirth date not null,
+SGender char(1) not null,
+Susername varchar(30) unique not null,
+Spassword varchar(30) unique not null);
+create table demanded
+(DemandID int primary key,
+ID int not null,
+Dfname varchar(25) not null,
+Dlname varchar(25) not null,
+Book varchar(40) not null,
+Author varchar(35) not null,
+Member varchar(10));
+create table books
+(imgurl varchar(500) not null,
+booktitle varchar(100) not null,
+bookdesc varchar(300),
+bookurl varchar(500) not null);
+create table notes
+(topic varchar(40),
+gdlink varchar(300),
+subject varchar(15));
+create table videos
+(videoname varchar(40),
+videolink varchar(100),
+videoimg varchar(40),
+subject varchar(15));
+insert into videos values
+('BJT-Common Emitter Configuration','KynKHr2cXgk','bjtcec.jpg','Electronics'),
+('BJT-Common Base Configuration','NMD4KECE-7I','bjtcbc.jpg','Electronics'),
+('K-Maps','lw1STgKUpW0','kmap.jpg','Electronics'),
+('Combinational Circuits - Multiplexer','aQlF-9i3fAA','mux.jpg','Electronics'),
+('Combinational Circuits - Demultiplexer','eeWHM3zzK3M','demux.jpg','Electronics'),
+('Flip Flops','QWMpq6NLwF4','ff.jpg','Electronics'),
+('Synchronous Counters','5vkWccb7uO4','syncCtr.jpg','Electronics'),
+('Asynchronous Counters','iHT-Jcgq2X0','asyncCtr.jpg','Electronics'),
+('Introduction to Logic Families','nb11AipMJd4','iLF.jpg','Electronics'),
+('Comparision of Logic Families','bj4oiFUoYAs','cLF.jpg','Electronics'),
+('Eigen Values and Eigen Vectors','1wjXVdwzgX8','eigen.jpg','Maths'),
+('Diagonalisation','DtNbBPfDoL8','diag.jpg','Maths'),
+('Taylor Series','LEspaisjDFE','taylor.jpg','Maths'),
+('Gamma Functions','SduCO-r_TOA','gamma.jpg','Maths'),
+('Laplace Theorem','qCLyiuhqatg','laplace.jpg','Maths'),
+('Vector Calculus','NyPEIyCXmnA','vector.jpg','Maths'),
+('Numeric and Generating Functions','TLN76vdZGoY','genrf.jpg','Maths'),
+('Recurrence Relations','1sZxmHICwUU','recr.jpg','Maths'),
+('Graph Theory','HipVU5vz3Q8','graph.jpg','Maths'),
+('Trees','f30rxGvPWPo','tree.jpg','Maths'),
+('Use Case Diagrams','DF-LYlypAPg','usecase.jpg','SE'),
+('Class Diagrams','QrYF9kUOIfE','class.jpg','SE'),
+('Sequential Diagrams','198CXe5C_h8','sequence.jpg','SE'),
+('Scrum Framework','0JXlEdf3P88','scrum.jpg','SE');
+insert into notes values
+('SOP and POS Form','https://drive.google.com/file/d/1mIccICZXoaN7RtWPFeh4oQNbWz4aC39U/view?usp=share_link','Electronics'),
+('K-Maps','https://drive.google.com/file/d/1-KtYPxpMQ44a6pVIMbny91PocTBzmc81/view?usp=share_link','Electronics'),
+('Multiplexers','https://drive.google.com/file/d/1djUtKJaT2P6QLJi8AbUvPzsqbsfw7Pg_/view?usp=share_link','Electronics'),
+('Counters','https://drive.google.com/file/d/1H2D3i5ohSsLnZiQXrmYMyfqpHoCUolx6/view?usp=share_link','Electronics'),
+('Logic Families','https://drive.google.com/file/d/1uXLW8vizwvZsYBy2xxG22S5Pz_FZtHnz/view?usp=share_link','Electronics'),
+('ADC Notes','https://drive.google.com/file/d/1vPIqcilC1s58U439ZhchTjIMirqYG_n6/view?usp=share_link','Electronics'),
+('Software Crisis','https://drive.google.com/file/d/1uLd673k2Z2ujuyc7uAUCRcLQwSj-U8i6/view?usp=share_link','SE'),
+('Evolution Of Software Engineering','https://drive.google.com/file/d/1QkFMbN_AOjagijjsCEX-yqAhLjJuc_t3/view?usp=share_link','SE'),
+('Coupling','https://drive.google.com/file/d/1ceyBw_JR0wFAYRF9kF45q5e6LdYMZDVv/view?usp=share_link','SE'),
+('Matrices','https://drive.google.com/file/d/1Wy-mOAmlUB3X3IrAPGJMpDvuMLadVK7-/view?usp=share_link','Maths'),
+('Diagonalisation','https://drive.google.com/file/d/16fXyD4V8WPHV03UDf2dsPOG5jyO2LDi8/view?usp=share_link','Maths'),
+('Vector Integration','https://drive.google.com/file/d/1ejDWBe1JGL376peQWyO7lsv7dAHu4SeL/view?usp=share_link','Maths'),
+('Laplace Theorem','https://drive.google.com/file/d/1vgZ5-VX_wWZ3upnlnJt2Zi5c3CgcsuAF/view?usp=share_link','Maths'),
+('Numeric and Generating Function','https://drive.google.com/file/d/1smf-0DyLwxsxbyOC_a6CCWYXkrqgxZ_d/view?usp=share_link','Maths'),
+('Recurrence Relations','https://drive.google.com/file/d/1kVUa4QxganyKp2L2VPkLVcboL4hy4CjT/view?usp=share_link','Maths');
+insert into books values
+('ATC.jpg','After The Cure','A book by Deirdre Gould','https://drive.google.com/file/d/1ST1EArNrPiA7I1N39RkvBLgo5tz7H5z8/view?usp=share_link'),
+('WH.jpg','Wuthering Heights','A book by Emily Bronte','https://drive.google.com/file/d/1HFPnzhrl-X8LcRthcjmgd1YedQMzMmXF/view?usp=share_link'),
+('DOWK_BS.jpg','Diary Of A Wimpy Kid: Big Shot','A book by Jeff Kinney','https://drive.google.com/file/d/1FuwHn82ilZYnSGaPMUkUvHaZgPGYyqjs/view?usp=share_link'),
+('AOSH.jpg','Adventures Of Sherlock Holmes','A book by Arthur Conan Doyle','https://drive.google.com/file/d/1zLg5uti6auv88lo2Y3dyWzjB82mrkpvD/view?usp=share_link'),
+('SID.jpg','Siddhartha','A book by Herman Hesse','https://drive.google.com/file/d/18o1NShune4lyqNoVOkNnrk4z3aIVi8ta/view?usp=share_link'),
+('step39.jpg','Thirty-Nine Steps','A book by John Buchan','https://drive.google.com/file/d/1150qRpwzvPuMXRvvPNtgAwas2CLP6Hz9/view?usp=share_link');
