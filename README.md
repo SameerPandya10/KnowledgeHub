@@ -4,33 +4,28 @@ This repository holds the code of an Online Library Website created by me which 
 In order to exprience my website on your system, please approach the following steps:
 
 
-  1. create a folder where you wish to clone the website and open terminal here  
-  2. initialise npm using the following command in the terminal
+  1. Create a folder where you wish to clone the website and open terminal here  
+  2. Write the following command in the terminal
       
-          npm init        
+          git clone https://github.com/SameerPandya10/KnowledgeHub.git        
         
-  3. install the following dependencies:
-  
-      a) express
-      b) mysql
-      c) body-parser
-      d) ejs
-  
-   using the following command in the terminal
+  3. This will clone all the files into a sub-folder "KnowledgeHub" in the folder you cloned the website.
+  4. Now move into the folder using the cd command as follows:
    
-          npm install <insert_dependency_name_here>
-        
-        
-  4. download mysql on your system and copy the data in the "knowledgeHubDB.txt" file into the workbench/command line client to create the database  
-  5. then host the website on the server 4400 using following command in the terminal  
+          cd KnowledgeHub/
+         
+  5. Now write the following command to download the node-modules into the folder "KnowledgeHub"  
  
+          npm install node-modules                
+                
+  6. Download mysql on your system and copy the entire data in the "knowledgeHubDB.txt" file into the workbench/command line client to create the database
+  7. This step completes the final setup of the website "KnowledgeHub" on your PC. Host the website on the server 4400 using following command in the terminal 
+
           node app.js
-                
-                
-  6. finally type this in the URL of any web browser to view and interact with this beautiful website
+          
+  8. Finally type this in the URL of any web browser to view and interact with this website
 
           localhost:4400
-  
   
 Feel free to suggest any improvements on my email ID: sameerpd.unofficial@gmail.com
 
